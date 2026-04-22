@@ -1,0 +1,39 @@
+using UnityEngine;
+
+public class ActiveWeapon : MonoBehaviour
+{
+    [SerializeField] private Sword sword;
+    public static ActiveWeapon Instance { get; private set; }
+
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public Sword GetActiveWeapon()
+    {
+        return sword;
+    }
+
+    private void Update()
+    {
+        FollowMousePosition();
+    }
+
+
+    private void FollowMousePosition()
+    {
+        Vector3 mousePos = GameInput.Instance.GetMousePosition();
+        Vector3 playerPos = Player.Instance.GetPlayerPosition();
+        if (mousePos.x < playerPos.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
+
+    }
+}
