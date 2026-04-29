@@ -4,7 +4,7 @@ using UnityEngine.AI;
 using Game.Utils;
 using UnityEngine.EventSystems;
 
-public class NPC_AI : MonoBehaviour
+public class Enemy_AI : MonoBehaviour
 {
     [SerializeField] private float roamingDistanceMax = 7f;
     [SerializeField] private float roamingDistanceMin = 1f;
@@ -15,7 +15,7 @@ public class NPC_AI : MonoBehaviour
     [SerializeField] private float chashingDistance = 7f;
     [SerializeField] private float chasingSpeedMultiplier = 2f;
     [SerializeField] private float attakingDistance = 2f;
-    [SerializeField] private float attackRate = 2f;
+    [SerializeField] private float attackRate = 1f;
     private float nextAttackTime = 0f;
 
     private float walkingSped;
@@ -32,7 +32,7 @@ public class NPC_AI : MonoBehaviour
     private float checkDirectionDuration = 0.1f;
     private Vector3 lastPosition;
 
-    private event EventHandler OnEnemyAttack;
+    public event EventHandler OnEnemyAttack;
     public bool isRun
     {
         get{
@@ -72,6 +72,12 @@ public class NPC_AI : MonoBehaviour
     {
         StateHandler();
         MovementDirectionHandler();
+    }
+
+    public void SetDeathState()
+    {
+        navMeshAgent.ResetPath();
+        state = State.Death;
     }
 
     private void StateHandler()
@@ -122,7 +128,10 @@ public class NPC_AI : MonoBehaviour
             {
                 if(distanceToPlayer <= attakingDistance)
                 {
-                    newState = State.Attacking;
+                    if (Player.Instance.isAlive())
+                        newState = State.Attacking;
+                    else
+                        newState = State.Roaming;
                 }
             }
 

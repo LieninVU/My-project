@@ -149,11 +149,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4
-        y: 437
+        y: 438
         width: 22
-        height: 37
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -171,11 +171,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 389
+        y: 390
         width: 21
-        height: 38
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -193,11 +193,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4
-        y: 341
+        y: 342
         width: 23
-        height: 40
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -215,11 +215,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 5
-        y: 316
+        y: 294
         width: 22
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -233,37 +233,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: B_witch_death_4
-      rect:
-        serializedVersion: 2
-        x: 8
-        y: 293
-        width: 15
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b9632db83b89302d0800000000000000
-      internalID: -3313637003902175589
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: B_witch_death_5
       rect:
         serializedVersion: 2
         x: 5
-        y: 264
+        y: 246
         width: 21
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -277,59 +255,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: B_witch_death_6
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 245
-        width: 19
-        height: 19
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 10334d34097427b10800000000000000
-      internalID: 1977721871307911937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: B_witch_death_7
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 215
-        width: 20
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b273fe733fa014a0800000000000000
-      internalID: -6624602416153922895
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: B_witch_death_8
       rect:
         serializedVersion: 2
         x: 5
-        y: 197
+        y: 198
         width: 23
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -343,37 +277,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: B_witch_death_9
-      rect:
-        serializedVersion: 2
-        x: 6
-        y: 176
-        width: 20
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ab0d23dad9421af0800000000000000
-      internalID: -427197810452132958
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: B_witch_death_10
       rect:
         serializedVersion: 2
         x: 4
-        y: 165
+        y: 166
         width: 25
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 25
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -391,11 +303,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4
-        y: 133
+        y: 134
         width: 25
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -413,11 +325,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4
-        y: 101
+        y: 102
         width: 25
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 19
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -435,11 +347,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4
-        y: 69
+        y: 70
         width: 25
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -457,11 +369,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4
-        y: 37
+        y: 38
         width: 25
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -479,11 +391,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4
-        y: 5
+        y: 6
         width: 25
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -500,7 +412,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: dee25b83158321f428b51e949458bf14
     internalID: 0
     vertices: []
     indices: 

@@ -102,8 +102,10 @@ GameObject:
   - component: {fileID: 6960319464340493529}
   - component: {fileID: 8651625992946283911}
   - component: {fileID: 5869916844631892065}
-  - component: {fileID: 2048725139797687540}
+  - component: {fileID: 1744067872092745274}
   - component: {fileID: 4420084214274235776}
+  - component: {fileID: 3330446616194587855}
+  - component: {fileID: 3793630692573376713}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -161,8 +163,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.11261535, y: 1.5363948}
-  m_Size: {x: 1.3365712, y: 3.0753398}
+  m_Offset: {x: -0.11261535, y: 0.89678764}
+  m_Size: {x: 1.3365712, y: 1.7961254}
   m_Direction: 0
 --- !u!195 &5869916844631892065
 NavMeshAgent:
@@ -186,7 +188,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &2048725139797687540
+--- !u!114 &1744067872092745274
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,19 +197,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 6827997924629760037}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 245a3710b6bbc984881eafdba762b15f, type: 3}
+  m_Script: {fileID: 11500000, guid: da4e656f21b3dea49b199a16b752dec0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NPC_AI
+  m_EditorClassIdentifier: Assembly-CSharp::Enemy_AI
   roamingDistanceMax: 7
   roamingDistanceMin: 1
   roamingTimerMax: 7
-  startState: 1
+  startState: 2
   isChasing: 1
-  isAttacking: 0
-  chashingDistance: 7
+  isAttacking: 1
+  chashingDistance: 10
   chasingSpeedMultiplier: 2
   attakingDistance: 2
-  attackRate: 2
+  attackRate: 1
 --- !u!114 &4420084214274235776
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,7 +222,105 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d242fa39866a74841b3704e89fc968a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyEntity
-  maxHealth: 20
+  _enemySO: {fileID: 0}
+--- !u!60 &3330446616194587855
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6827997924629760037}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.522882, y: 3.516369}
+      - {x: -3.6471667, y: 3.2992482}
+      - {x: -4.4603796, y: 1.3151904}
+      - {x: -1.8834132, y: -0.6754992}
+      - {x: 1.3033928, y: -0.7362481}
+  m_UseDelaunayMesh: 1
+--- !u!61 &3793630692573376713
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6827997924629760037}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.059963226, y: 1.5840275}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.8794599, y: 3.1686683}
+  m_EdgeRadius: 0
 --- !u!1 &6895983592692422582
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,4 +449,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a0ed8049a2f7854093158d36b5ad0ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyVisual
-  npcAI: {fileID: 2048725139797687540}
+  enemyAI: {fileID: 1744067872092745274}
+  _enemyEntity: {fileID: 4420084214274235776}
+  _enemyShadow: {fileID: 2929896036018411469}
