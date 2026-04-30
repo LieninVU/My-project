@@ -8,8 +8,8 @@ public class EnemyVisual : MonoBehaviour
 
 
     [SerializeField] private Enemy_AI enemyAI;
-    [SerializeField] private EnemyEntity _enemyEntity;
-    [SerializeField] private GameObject _enemyShadow;
+    [SerializeField] private EnemyEntity enemyEntity;
+    [SerializeField] private GameObject enemyShadow;
     private Animator animator;
     private const string IS_RUN = "IsRun";
     private const string ATTACK = "Attack";
@@ -27,16 +27,8 @@ public class EnemyVisual : MonoBehaviour
     private void Start()
     {
         enemyAI.OnEnemyAttack += EnemyAI_OnEnemyAttack;
-        _enemyEntity.OnTakeHit += EnemyEntityOnTakeHit;
-        _enemyEntity.OnDeath += EnemyEntityOnDeath;
-    }
-
-
-    private void OnDestroy()
-    {
-        enemyAI.OnEnemyAttack -= EnemyAI_OnEnemyAttack;
-        _enemyEntity.OnTakeHit -= EnemyEntityOnTakeHit;
-        _enemyEntity.OnDeath -= EnemyEntityOnDeath;
+        enemyEntity.OnTakeHit += EnemyEntityOnTakeHit;
+        enemyEntity.OnDeath += EnemyEntityOnDeath;
     }
 
 
@@ -47,12 +39,12 @@ public class EnemyVisual : MonoBehaviour
     }
     public void TriggerAttackAnimationTurnOff()
     {
-        _enemyEntity.PolygonColiderOff();
+        enemyEntity.PolygonColiderOff();
     }
 
     public void TriggerAttackAnimationTurnOn()
     {
-        _enemyEntity.PolygonColiderOn();
+        enemyEntity.PolygonColiderOn();
     }
 
     private void EnemyAI_OnEnemyAttack(object sender, System.EventArgs e)
@@ -67,7 +59,13 @@ public class EnemyVisual : MonoBehaviour
     {
         animator.SetBool(IS_DIE, true);
         _spriteRenderer.sortingOrder = -1;
-        _enemyShadow.SetActive(false);
+        enemyShadow.SetActive(false);
+    }
+    private void OnDestroy()
+    {
+        enemyAI.OnEnemyAttack -= EnemyAI_OnEnemyAttack;
+        enemyEntity.OnTakeHit -= EnemyEntityOnTakeHit;
+        enemyEntity.OnDeath -= EnemyEntityOnDeath;
     }
 
 }

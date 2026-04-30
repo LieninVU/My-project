@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d242fa39866a74841b3704e89fc968a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyEntity
-  _enemySO: {fileID: 0}
+  enemySO: {fileID: 0}
 --- !u!60 &3330446616194587855
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -450,5 +450,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyVisual
   enemyAI: {fileID: 1744067872092745274}
-  _enemyEntity: {fileID: 4420084214274235776}
-  _enemyShadow: {fileID: 2929896036018411469}
+  enemyEntity: {fileID: 4420084214274235776}
+  enemyShadow: {fileID: 2929896036018411469}

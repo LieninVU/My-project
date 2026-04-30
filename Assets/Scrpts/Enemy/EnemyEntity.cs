@@ -10,7 +10,6 @@ public class EnemyEntity : MonoBehaviour
     public event EventHandler OnDeath;
 
     [SerializeField] private EnemySO _enemySO;
-    //[SerializeField] private int maxHealth;
     private int currenHealth;
     private CapsuleCollider2D _capsuleCollider2D;
     private PolygonCollider2D _polygonColider2D;
@@ -56,7 +55,6 @@ public class EnemyEntity : MonoBehaviour
             _polygonColider2D.enabled = false;
             OnDeath?.Invoke(this, EventArgs.Empty);
             _enemyAI.SetDeathState();
-            //Destroy(gameObject);
         }
     }
 

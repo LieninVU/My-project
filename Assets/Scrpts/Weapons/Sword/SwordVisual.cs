@@ -16,14 +16,19 @@ public class SwordVisual : MonoBehaviour
     {
         sword.onSwordSwing += SwordOnSwordSwing;
     }
+    public void TriggerEndAttackAnimation()
+    {
+        sword.AttackColliderOff();
+    }
 
     private void SwordOnSwordSwing(object sender, EventArgs e)
     {
         animator.SetTrigger(ATTACK);
     }
 
-    public void TriggerEndAttackAnimation()
+
+    private void OnDestroy()
     {
-        sword.AttackColliderOff();
+        sword.onSwordSwing -= SwordOnSwordSwing;
     }
 }

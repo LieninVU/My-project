@@ -11,10 +11,6 @@ public class ActiveWeapon : MonoBehaviour
         Instance = this;
     }
 
-    public Sword GetActiveWeapon()
-    {
-        return sword;
-    }
 
     private void Update()
     {
@@ -22,6 +18,10 @@ public class ActiveWeapon : MonoBehaviour
         FollowMousePosition();
     }
 
+    public Sword GetActiveWeapon()
+    {
+        return sword;
+    }
 
     private void FollowMousePosition()
     {

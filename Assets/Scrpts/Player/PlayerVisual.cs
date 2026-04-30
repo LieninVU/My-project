@@ -27,6 +27,7 @@ public class PlayerVisual : MonoBehaviour
         if(Player.Instance.isAlive()) AjustPlayerFacingDirection();
     }
 
+
     private void PlayerOnPlayerDeath(object sender, EventArgs e)
     {
         animator.SetBool(IS_DIE, true);
@@ -46,5 +47,9 @@ public class PlayerVisual : MonoBehaviour
             spriteRenderer.flipX= false;
         }
 
+    }
+    private void OnDestroy()
+    {
+        Player.Instance.OnPlayerDeath -= PlayerOnPlayerDeath;
     }
 }
