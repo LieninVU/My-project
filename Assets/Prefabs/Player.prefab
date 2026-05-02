@@ -199,6 +199,7 @@ MonoBehaviour:
   dashSpeedMuliplier: 4
   dashTime: 0.1
   trailRenderer: {fileID: 5268792330611022774}
+  dashCoolDownTime: 0.5
 --- !u!50 &8071540471277773158
 Rigidbody2D:
   serializedVersion: 5
