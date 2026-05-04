@@ -222,7 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d242fa39866a74841b3704e89fc968a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyEntity
-  enemySO: {fileID: 0}
+  _enemySO: {fileID: 11400000, guid: b52be6b9f61711a47a553ed6792024a1, type: 2}
 --- !u!60 &3330446616194587855
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -230,7 +230,7 @@ PolygonCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6827997924629760037}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}

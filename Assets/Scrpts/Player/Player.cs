@@ -13,6 +13,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float dashCoolDownTime = 0.5f;    
     public event EventHandler OnPlayerDeath;
     public event EventHandler OnFlashBlink;
+    public event Action<int, int> OnHealthChange;
+    public event Action OnShowRestartMenu;
     private Rigidbody2D rb;
     private readonly float minMovementSpeed = 0.1f;
     private bool isRun = false;
@@ -80,11 +82,15 @@ public class Player : MonoBehaviour
             _knockBack.GetKnockBack(damageSource);
             OnFlashBlink?.Invoke(this, EventArgs.Empty);
             StartCoroutine(DamageRocoveryRoutine());
+            OnHealthChange?.Invoke(_currentHealth, maxHealth);
         }
         DetectDetah();
     }
 
     public bool isAlive() {  return _isAlive; }
+
+    public int GetCurrentHealth() { return _currentHealth; }
+    public int GetMaxHealth() { return maxHealth; }
 
     private void DetectDetah()
     {
@@ -94,7 +100,8 @@ public class Player : MonoBehaviour
             _knockBack.StopKnockBack();
             GameInput.Instance.DisableMovement();
             OnPlayerDeath?.Invoke(this, EventArgs.Empty);
-            //Destroy(this.gameObject); 
+            OnHealthChange?.Invoke(_currentHealth, maxHealth);
+            OnShowRestartMenu?.Invoke();
         }
     }
 
