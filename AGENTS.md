@@ -2,7 +2,7 @@
 - Project name: My project
 - Unity version: Unity 6000.3.13f1
 - Active game object:
-  - Name: Canvas
+  - Name: Player
   - Tag: Untagged
-  - Layer: UI
+  - Layer: Default
 <!-- UNITY CODE ASSIST INSTRUCTIONS END -->

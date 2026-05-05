@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
         _mainCamera = Camera.main;
         _standartSpeed = Speed;
         _dashSpeed = Speed * dashSpeedMuliplier;
+        
     }
 
     private void Start()
@@ -91,6 +92,15 @@ public class Player : MonoBehaviour
 
     public int GetCurrentHealth() { return _currentHealth; }
     public int GetMaxHealth() { return maxHealth; }
+
+    public void Heal(int amountHeal)
+    {
+        if (_isAlive)
+        {
+            _currentHealth = Mathf.Min(maxHealth, _currentHealth += amountHeal);
+            OnHealthChange?.Invoke(_currentHealth, maxHealth);
+        }
+    }
 
     private void DetectDetah()
     {
